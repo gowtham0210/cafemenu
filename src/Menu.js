@@ -1,19 +1,27 @@
 import React from 'react';
 import photo from './images/item-1.jpeg';
+import menu from './data';
 
-function Menu() {
+function Menu({items}) {
   return (
     <div className='section-center'>
-      <article>
-        <img src={photo} alt ="" className='photo' />
+      {items.map((menuItem) => {
+        const {id, title, img, desc, price} = menuItem;
+
+        return(
+          <article key="id" className="menu-item">
+        <img src={img} alt ="photo" className='photo' />
         <div className='item-info'>
             <header>
-                <h4>Dish Title</h4>
-                <h4>₹ 100</h4>
+                <h4>{title}</h4>
+                <h4 class="price">₹{Math.floot(price*10)}</h4>
             </header>
-            <p className=''>This is a very good dish</p>
+            <p className="item-text">{desc}</p>
         </div>
       </article>
+        )
+      })
+      }
     </div>
   )
 }

@@ -1,8 +1,11 @@
 import Category from './Category';
 import './App.css';
 import Menu from './Menu';
+import items from './data';
+const allcategories = ['all', ...new Set(items.map((item) => item.category))]
 
 function App() {
+  
   return (
     <main>
       <section className='menu section'>
