@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cafemenu/static/css/main.5a9996e0.css",
+    "main.js": "/cafemenu/static/js/main.fad44ff8.js",
+    "index.html": "/cafemenu/index.html",
+    "main.5a9996e0.css.map": "/cafemenu/static/css/main.5a9996e0.css.map",
+    "main.fad44ff8.js.map": "/cafemenu/static/js/main.fad44ff8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a9996e0.css",
+    "static/js/main.fad44ff8.js"
+  ]
+}
