@@ -1,20 +1,21 @@
 import React, {useState} from 'react'
 import Category from './Category';
 import './App.css';
+import Footer from './Footer';
 import Menu from './Menu';
-import menu from './data';
-const allcategories = ['all', ...new Set(menu.map((item) => item.category))]
+import items from './data';
+const allcategories = ['all', ...new Set(items.map((item) => item.category))]
 
 function App() {
-  const [menuItems, setMenuItems] = useState(menu);
+  const [menuItems, setMenuItems] = useState(items);
   const [Categories, setCategories] = useState(allcategories);
 
   const filterItems = (category) => {
     if(category === "all"){
-      setMenuItems(menu);
+      setMenuItems(items);
       return;
     }
-    const newItems = menu.filter((item) => item.category === category);
+    const newItems = items.filter((item) => item.category === category);
     setMenuItems(newItems);
   }
   return (
@@ -30,7 +31,9 @@ function App() {
          <Menu items={menuItems} /> 
         </div>
       </section>
+      <Footer />
     </main>
+
   );
 }
 
