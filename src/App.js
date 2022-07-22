@@ -2,19 +2,19 @@ import React, {useState} from 'react'
 import Category from './Category';
 import './App.css';
 import Menu from './Menu';
-import items from './data';
-const allcategories = ['all', ...new Set(items.map((item) => item.category))]
+import menu from './data';
+const allcategories = ['all', ...new Set(menu.map((item) => item.category))]
 
 function App() {
-  const [menuItems, setMenuItems] = useState(items);
+  const [menuItems, setMenuItems] = useState(menu);
   const [Categories, setCategories] = useState(allcategories);
 
   const filterItems = (category) => {
     if(category === "all"){
-      setMenuItems(items);
+      setMenuItems(menu);
       return;
     }
-    const newItems = items.filter((item) => item.category === category);
+    const newItems = menu.filter((item) => item.category === category);
     setMenuItems(newItems);
   }
   return (
@@ -29,10 +29,6 @@ function App() {
         <Category Categories={Categories} filterItems={filterItems}/>
          <Menu items={menuItems} /> 
         </div>
-
-
-
-
       </section>
     </main>
   );

@@ -25,4 +25,4 @@ function Menu({items}) {
   )
 }
 
-export default Menu
+export default Menu;
